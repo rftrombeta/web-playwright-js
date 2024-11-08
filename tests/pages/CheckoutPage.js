@@ -6,11 +6,23 @@ export class CheckoutPage {
         this.page = page
     }
 
+    /**
+     * Verifica se a página de checkout está carregada corretamente.
+     * 
+     * @param {string} checkoutPage - O título esperado da página de checkout.
+     */
     async isCheckoutPage(checkoutPage) {
         await this.page.waitForLoadState('networkidle')
         await expect(this.page.locator('.title')).toHaveText(`Checkout: ${checkoutPage}`)
     }
 
+    /**
+     * Preenche as informações do usuário na página de checkout.
+     * 
+     * @param {string} firstName - O primeiro nome do usuário.
+     * @param {string} lastName - O sobrenome do usuário.
+     * @param {string} postalCode - O código postal do usuário.
+     */
     async setYourInformation(firstName, lastName, postalCode) {
         await this.page.getByPlaceholder('First Name').fill(firstName)
         await this.page.getByPlaceholder('Last Name').fill(lastName)
@@ -18,10 +30,18 @@ export class CheckoutPage {
         await this.page.getByRole('button', { name: 'Continue' }).click()
     }
 
+    /**
+     * Finaliza o processo de checkout.
+     */
     async finishCheckout() {
         await this.page.getByRole('button', { name: 'finish' }).click()
     }
 
+    /**
+     * Lista os produtos e suas respectivas informações na página de overview.
+     * 
+     * @returns {Promise<Array<Object>>} - Uma promessa que devolve uma lista de objetos contendo os detalhes dos produtos.
+     */
     async listOverviewProducts() {
         const products = await this.page.locator('.cart_list').all()
         const productDetails = []

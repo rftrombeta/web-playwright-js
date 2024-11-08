@@ -3,6 +3,12 @@ const { MongoClient } = require('mongodb')
 const uri = 'mongodb://localhost:27017/'
 const client = new MongoClient(uri)
 
+/**
+ * Conecta ao banco de dados MongoDB.
+ * 
+ * @returns {Promise<Db>} - Retorna uma promessa que resolve para a instância do banco de dados.
+ * @throws {Error} - Lança um erro se não for possível conectar ao banco de dados.
+ */
 export async function connectToDatabase() {
     try {
         const timeout = 10000 // Tempo limite de 10 segundos para a conexão

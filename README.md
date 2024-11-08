@@ -1,33 +1,26 @@
-# web-playwright-js
-
+## Introdução
 Projeto de automação Web com Playwright e JavaScript
 
-## Descrição
-
 Este projeto utiliza o Playwright para automação de testes em aplicações web. O objetivo é fornecer uma estrutura para escrever e executar testes automatizados de forma eficiente.
+***
 
 ## Pré-requisitos
+- [Node.js](https://nodejs.org/en)
+  - [npm](https://www.npmjs.com/)
+- [Docker](https://www.docker.com/)
+***
 
-- Node.js (versão 16 ou superior)
-- npm (gerenciador de pacotes do Node.js)
-- Docker (para executar o MongoDB em contêiner)
-
-## Instalação
-
+## Preparação do ambiente
 1. Faça o clone do repositório.
+2. Instale as dependências: `npm install`
+4. Inicie o MongoDB usando Docker: `docker run --name mongodb -d -p 27017:27017 mongo`
+5. Execute os testes: `npx playwright test --headed`
+***
 
-2. Instale as dependências:
+## Documentação
+1. [Documentação Funcional](DOCUMENTAÇÃO-FUNCIONAL.md)
+***
 
-   npm install
-
-3. Inicie o MongoDB usando Docker:
-    docker run --name mongodb -d -p 27017:27017 mongo
-
-4. Execute os testes:
-    npx playwright test --headed
-
-
-Estrutura do Projeto
-pages/: Contém as classes de página que encapsulam a lógica de interação com as páginas web.
-tests/: Contém os arquivos de teste.
-database.js: Configuração da conexão com o MongoDB.
+## Links Uteis
+1. [Playwrjght](https://playwright.dev/)
+***
