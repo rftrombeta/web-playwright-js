@@ -1,4 +1,4 @@
-// const { connectToDatabase } = require('../db') // Importe a função de conexão com o banco de dados
+const { connectToDatabase } = require('./support/database') // Importe a função de conexão com o banco de dados
 const { faker } = require('@faker-js/faker')
 const { test } = require('@playwright/test');
 
@@ -92,15 +92,15 @@ test('deve adicionar um produto no carrinho e realizar o checkout', async ({ pag
     const overviewProducts = await checkoutPage.listOverviewProducts()
 
     // Conectar ao banco de dados e armazenar os dados
-    // const db = await connectToDatabase();
-    // const collection = db.collection('orders'); // Substitua pelo nome da sua coleção
-    // await collection.insertOne({
-    //     firstName,
-    //     lastName,
-    //     zipCode,
-    //     products: overviewProducts,
-    //     date: new Date()
-    // });
+    const db = await connectToDatabase();
+    const collection = db.collection('orders'); // Substitua pelo nome da sua coleção
+    await collection.insertOne({
+        firstName,
+        lastName,
+        zipCode,
+        products: overviewProducts,
+        date: new Date()
+    });
     
     await checkoutPage.finishCheckout()
 

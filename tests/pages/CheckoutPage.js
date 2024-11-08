@@ -23,7 +23,8 @@ export class CheckoutPage {
     }
 
     async listOverviewProducts() {
-        const products = await this.page.locator('.cart_list').all();
+        const products = await this.page.locator('.cart_list').all()
+        const productDetails = []
         for (const product of products) {
             const name = await product.locator('.inventory_item_name').textContent()
             const description = await product.locator('.inventory_item_desc').textContent()
