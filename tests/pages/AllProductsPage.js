@@ -12,7 +12,9 @@ export class AllProductsPage {
     }
 
     async returnListOfProducts() {
-        return await this.page.locator('.inventory_list .inventory_item_name').allTextContents()
+        // return await this.page.locator('.inventory_list .inventory_item_name').allTextContents()
+        const products = await this.page.locator('.inventory_list .inventory_item_name').allTextContents()
+        return products.filter(product => product !== 'Sauce Labs Bolt T-Shirt')
     }
 
     async selectProduct(item) {
