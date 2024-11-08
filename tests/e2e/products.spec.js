@@ -1,70 +1,48 @@
-const { connectToDatabase } = require('./support/database') // Importe a função de conexão com o banco de dados
 const { faker } = require('@faker-js/faker')
-const { test } = require('@playwright/test');
+const { test } = require('../support');
 
-const { AllProductsPage } = require('../pages/AllProductsPage')
-const { Cart } = require('../pages/ComponentesPage')
-const { CartPage } = require('../pages/CartPage')
-const { CheckoutPage } = require('../pages/CheckoutPage')
-const { LoginPage } = require('../pages/LoginPage')
-const { ProductDetailsPage } = require('../pages/ProductDetailsPage')
-
-let allProductsPage
-let cart
-let cartPage
-let checkoutPage
-let loginPage
-let productDetails
-
-test.beforeEach(async ({ page }) => {
-    allProductsPage = new AllProductsPage(page)
-    cart = new Cart(page)
-    cartPage = new CartPage(page)
-    checkoutPage = new CheckoutPage(page)
-    loginPage = new LoginPage(page)
-    productDetails = new ProductDetailsPage(page)
-})
+const { connectToDatabase } = require('../support/database')
 
 test('deve adicionar um produto no carrinho e realizar o checkout', async ({ page }) => {
     // é importante que o teste seja executado em uma página de produtos
-    await loginPage.visit()
-    await loginPage.login('standard_user', 'secret_sauce')
-    await allProductsPage.loginSuccess()
+    await page.login.visit()
+    await page.login.login('standard_user', 'secret_sauce')
+    await page.allProducts.loginSuccess()
 
     // Recuperar o texto de todos os produtos dentro da div com a classe 'inventory_list'
-    const products = await allProductsPage.returnListOfProducts()
+    const products = await page.allProducts.returnListOfProducts()
 
     // Selecionar um produto aleatório
     const randomIndex = Math.floor(Math.random() * products.length)
     const productName = products[randomIndex]
 
-    allProductsPage.selectProduct(productName)
-    productDetails.isProductDetailsPage(productName)
+    page.allProducts.selectProduct(productName)
+    page.productDetails.isProductDetailsPage(productName)
 
-    const product = await productDetails.returnProductDetails()
+    // const product = await page.productDetails.returnProductDetails()
 
-    await productDetails.addProductToCart()
+    await page.productDetails.addProductToCart()
 
-    await cart.proceedToCart()
+    await page.cart.proceedToCart()
 
-    await cartPage.isCartPage()
+    await page.myCart.isCartPage()
 
-    await cartPage.proceedToCheckout()
+    await page.myCart.proceedToCheckout()
 
     // await checkoutPage.isCheckoutYourInformationPage()
-    await checkoutPage.isCheckoutPage('Your Information')
+    await page.checkout.isCheckoutPage('Your Information')
 
     const firstName = faker.person.firstName()
     const lastName = faker.person.lastName()
     const zipCode = faker.location.zipCode()
 
-    await checkoutPage.setYourInformation(firstName, lastName, zipCode)
+    await page.checkout.setYourInformation(firstName, lastName, zipCode)
 
     // await checkoutPage.isCheckoutOverviewPage()
-    await checkoutPage.isCheckoutPage('Overview')
+    await page.checkout.isCheckoutPage('Overview')
 
     //Listar os produtos as respectivas informações na página de overview
-    const overviewProducts = await checkoutPage.listOverviewProducts()
+    const overviewProducts = await page.checkout.listOverviewProducts()
 
     // Conectar ao banco de dados e armazenar os dados
     const db = await connectToDatabase()
@@ -77,7 +55,7 @@ test('deve adicionar um produto no carrinho e realizar o checkout', async ({ pag
         date: new Date()
     })
     
-    await checkoutPage.finishCheckout()
+    await page.checkout.finishCheckout()
 
-    await checkoutPage.isCheckoutPage('Complete!')
+    await page.checkout.isCheckoutPage('Complete!')
 })
