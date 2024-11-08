@@ -14,11 +14,7 @@ Este projeto utiliza o Playwright para automação de testes em aplicações web
 
 ## Instalação
 
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/seu-usuario/web-playwright-js.git
-   cd web-playwright-js
+1. Faça o clone do repositório.
 
 2. Instale as dependências:
 
