@@ -1,11 +1,18 @@
 const { expect } = require('@playwright/test')
 
-export class CartPage {
+export class YourCart {
 
     constructor(page) {
         this.page = page
     }
 
+    /**
+     * Navega para a página do carrinho.
+     */
+    async proceedToCart() {
+        await this.page.locator('.shopping_cart_link').click()
+    }
+    
     /**
      * Verifica se a página do carrinho está carregada corretamente.
      */

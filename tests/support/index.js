@@ -1,24 +1,24 @@
 const { test: base, expect } = require('@playwright/test')
 
-const { AllProductsPage } = require('../pages/AllProductsPage')
-const { Burger, Cart } = require('../pages/Components')
-const { CartPage } = require('../pages/CartPage')
-const { CheckoutPage } = require('../pages/CheckoutPage')
-const { LoginPage } = require('../pages/LoginPage')
-const { ProductDetailsPage } = require('../pages/ProductDetailsPage')
+const { AllProducts } = require('./actions/AllProducts')
+const { YourCart } = require('./actions/YourCart')
+const { Checkout } = require('./actions/Checkout')
+const { Login } = require('./actions/Login')
+const { ProductDetails } = require('./actions/ProductDetails')
 
 const test = base.extend({
     page: async ({ page }, use) => {
-        await use({
-            ...page,
-            allProducts: new AllProductsPage(page),
-            burguer: new Burger(page),
-            cart: new Cart(page),
-            myCart: new CartPage(page),
-            checkout: new CheckoutPage(page),
-            login: new LoginPage(page),
-            productDetails: new ProductDetailsPage(page)
-        })
+        
+        const context = page
+
+        context['allProducts'] = new AllProducts(page)
+        context['yourCart'] = new YourCart(page)
+        context['checkout'] = new Checkout(page)
+        context['login'] = new Login(page)
+        context['productDetails'] = new ProductDetails(page)
+
+        await use(context)
+
     }
 })
 export { test, expect }

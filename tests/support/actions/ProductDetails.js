@@ -1,6 +1,6 @@
 const { expect } = require('@playwright/test')
 
-export class ProductDetailsPage {
+export class ProductDetails {
 
     constructor(page) {
         this.page = page

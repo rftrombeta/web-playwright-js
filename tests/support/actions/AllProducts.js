@@ -1,17 +1,7 @@
-const { expect } = require('@playwright/test')
-
-export class AllProductsPage {
+export class AllProducts {
 
     constructor(page) {
         this.page = page
-    }
-
-    /**
-     * Verifica se o login foi bem-sucedido ao verificar se a página de produtos está carregada corretamente.
-     */
-    async loginSuccess() {
-        await this.page.waitForLoadState('networkidle')
-        await expect(this.page.locator('.title')).toHaveText('Products')
     }
 
     /**

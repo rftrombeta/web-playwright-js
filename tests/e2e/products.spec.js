@@ -1,13 +1,11 @@
-const { faker } = require('@faker-js/faker')
-const { test } = require('../support');
-
-const { connectToDatabase } = require('../support/database')
+// const { faker } = require('@faker-js/faker')
+const { insertProductDetailsInMongDb } = require('../support/database')
+const { generateFakePeople } = require('../support/utils')
+const { test } = require('../support')
 
 test('deve adicionar um produto no carrinho e realizar o checkout', async ({ page }) => {
-    // é importante que o teste seja executado em uma página de produtos
-    await page.login.visit()
-    await page.login.login('standard_user', 'secret_sauce')
-    await page.allProducts.loginSuccess()
+
+    await page.login.do('standard_user', 'secret_sauce')
 
     // Recuperar o texto de todos os produtos dentro da div com a classe 'inventory_list'
     const products = await page.allProducts.returnListOfProducts()
@@ -19,41 +17,29 @@ test('deve adicionar um produto no carrinho e realizar o checkout', async ({ pag
     page.allProducts.selectProduct(productName)
     page.productDetails.isProductDetailsPage(productName)
 
-    // const product = await page.productDetails.returnProductDetails()
-
     await page.productDetails.addProductToCart()
 
-    await page.cart.proceedToCart()
+    await page.yourCart.proceedToCart()
 
-    await page.myCart.isCartPage()
+    await page.yourCart.isCartPage()
 
-    await page.myCart.proceedToCheckout()
+    await page.yourCart.proceedToCheckout()
 
     // await checkoutPage.isCheckoutYourInformationPage()
     await page.checkout.isCheckoutPage('Your Information')
 
-    const firstName = faker.person.firstName()
-    const lastName = faker.person.lastName()
-    const zipCode = faker.location.zipCode()
+    const people = generateFakePeople(1); // Gere 1 entrada de dados falsos
+    const { firstName, lastName, zipCode } = people[0];
 
     await page.checkout.setYourInformation(firstName, lastName, zipCode)
 
-    // await checkoutPage.isCheckoutOverviewPage()
     await page.checkout.isCheckoutPage('Overview')
 
     //Listar os produtos as respectivas informações na página de overview
     const overviewProducts = await page.checkout.listOverviewProducts()
 
-    // Conectar ao banco de dados e armazenar os dados
-    const db = await connectToDatabase()
-    const collection = db.collection('orders') // Substitua pelo nome da sua coleção
-    await collection.insertOne({
-        firstName,
-        lastName,
-        zipCode,
-        products: overviewProducts,
-        date: new Date()
-    })
+    // Enviar para o banco de dados as iformações do usuário e os produtos
+    insertProductDetailsInMongDb(firstName, lastName, zipCode, overviewProducts)
     
     await page.checkout.finishCheckout()
 
