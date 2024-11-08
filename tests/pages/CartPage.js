@@ -8,6 +8,10 @@ export class CartPage {
 
     async isCartPage() {
         await this.page.waitForLoadState('networkidle')
-        await expect(this.page.locator('.inventory_details_name')).toHaveText('Your Cart')
-    }    
+        await expect(this.page.locator('.title')).toHaveText('Your Cart')
+    }
+
+    async proceedToCheckout() {
+        await this.page.locator('#checkout').click()
+    }
 }

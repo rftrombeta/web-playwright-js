@@ -1,19 +1,26 @@
+// const { connectToDatabase } = require('../db') // Importe a função de conexão com o banco de dados
+const { faker } = require('@faker-js/faker')
 const { test } = require('@playwright/test');
 
 const { AllProductsPage } = require('../pages/AllProductsPage')
 const { Cart } = require('../pages/ComponentesPage')
+const { CartPage } = require('../pages/CartPage')
+const { CheckoutPage } = require('../pages/CheckoutPage')
 const { LoginPage } = require('../pages/LoginPage')
 const { ProductDetailsPage } = require('../pages/ProductDetailsPage')
-const { CartPage } = require('../pages/CartPage')   
 
 let allProductsPage
+let cart
+let cartPage
+let checkoutPage
 let loginPage
 let productDetails
-let cart
 
 test.beforeEach(async ({ page }) => {
     allProductsPage = new AllProductsPage(page)
     cart = new Cart(page)
+    cartPage = new CartPage(page)
+    checkoutPage = new CheckoutPage(page)
     loginPage = new LoginPage(page)
     productDetails = new ProductDetailsPage(page)
 })
@@ -61,8 +68,41 @@ test('deve adicionar um produto no carrinho e realizar o checkout', async ({ pag
     console.log(`Descrição do produto: ${product.detail}`)
     console.log(`Preço do produto: ${product.price}`)
 
-    // Adicionar o produto ao carrinho
     await productDetails.addProductToCart()
 
     await cart.proceedToCart()
+
+    await cartPage.isCartPage()
+
+    await cartPage.proceedToCheckout()
+
+    // await checkoutPage.isCheckoutYourInformationPage()
+    await checkoutPage.isCheckoutPage('Your Information')
+
+    const firstName = faker.person.firstName()
+    const lastName = faker.person.lastName()
+    const zipCode = faker.location.zipCode()
+
+    await checkoutPage.setYourInformation(firstName, lastName, zipCode)
+
+    // await checkoutPage.isCheckoutOverviewPage()
+    await checkoutPage.isCheckoutPage('Overview')
+
+    //Listar os produtos as respectivas informações na página de overview
+    const overviewProducts = await checkoutPage.listOverviewProducts()
+
+    // Conectar ao banco de dados e armazenar os dados
+    // const db = await connectToDatabase();
+    // const collection = db.collection('orders'); // Substitua pelo nome da sua coleção
+    // await collection.insertOne({
+    //     firstName,
+    //     lastName,
+    //     zipCode,
+    //     products: overviewProducts,
+    //     date: new Date()
+    // });
+    
+    await checkoutPage.finishCheckout()
+
+    await checkoutPage.isCheckoutPage('Complete!')
 })

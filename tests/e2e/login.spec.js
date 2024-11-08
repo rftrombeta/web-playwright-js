@@ -1,5 +1,5 @@
-const { test } = require('@playwright/test')
 const { faker } = require('@faker-js/faker')
+const { test } = require('@playwright/test')
 
 const { AllProductsPage } = require('../pages/AllProductsPage')
 const { Burger } = require('../pages/ComponentesPage')
