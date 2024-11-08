@@ -5,12 +5,16 @@ const client = new MongoClient(uri)
 
 export async function connectToDatabase() {
     try {
-        if (!client.topology || !client.topology.isConnected()) {
-            await client.connect()
-        }
+        const timeout = 10000 // Tempo limite de 10 segundos para a conexão
+        const connectPromise = client.connect()
+        const timeoutPromise = new Promise((_, reject) =>
+            setTimeout(() => reject(new Error('Tempo limite de conexão excedido')), timeout)
+        );
+
+        await Promise.race([connectPromise, timeoutPromise])
+
         return client.db('mongodb') // Substitua pelo nome do seu banco de dados
     } catch (error) {
-        console.error('Falha ao conectar ao banco de dados:', error)
-        throw new Error('Não foi possível conectar ao banco de dados')
+        throw new Error('Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.')
     }
 }

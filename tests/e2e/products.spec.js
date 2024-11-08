@@ -67,15 +67,15 @@ test('deve adicionar um produto no carrinho e realizar o checkout', async ({ pag
     const overviewProducts = await checkoutPage.listOverviewProducts()
 
     // Conectar ao banco de dados e armazenar os dados
-    const db = await connectToDatabase();
-    const collection = db.collection('orders'); // Substitua pelo nome da sua coleção
+    const db = await connectToDatabase()
+    const collection = db.collection('orders') // Substitua pelo nome da sua coleção
     await collection.insertOne({
         firstName,
         lastName,
         zipCode,
         products: overviewProducts,
         date: new Date()
-    });
+    })
     
     await checkoutPage.finishCheckout()
 
