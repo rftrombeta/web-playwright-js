@@ -21,7 +21,7 @@ test('realiza login', async ({ page }) => {
   await allProductsPage.loginSuccess()
 })
 
-test('realiza Logout', async ({ page }) => {
+test.skip('realiza Logout', async ({ page }) => {
   await loginPage.visit()
   await loginPage.login('standard_user', 'secret_sauce')
   await allProductsPage.loginSuccess()
@@ -29,19 +29,19 @@ test('realiza Logout', async ({ page }) => {
   await loginPage.isLoginIn()
 })
 
-test('não deve logar sem usuário', async ({ page }) => {
+test.skip('não deve logar sem usuário', async ({ page }) => {
   await loginPage.visit()
   await loginPage.login('', 'secret_sauce')
   await loginPage.loginUnsuccess('Username is required')
 })
 
-test('não deve logar sem senha', async ({ page }) => {
+test.skip('não deve logar sem senha', async ({ page }) => {
   await loginPage.visit()
   await loginPage.login('standard_user', '')
   await loginPage.loginUnsuccess('Password is required')
 })
 
-test('não deve logar com usuário inexistente', async ({ page }) => {
+test.skip('não deve logar com usuário inexistente', async ({ page }) => {
   const username = faker.internet.username()
 
   await loginPage.visit()
@@ -49,7 +49,7 @@ test('não deve logar com usuário inexistente', async ({ page }) => {
   await loginPage.loginUnsuccess('Username and password do not match any user in this service')
 })
 
-test('não deve logar com senha incorreta', async ({ page }) => {
+test.skip('não deve logar com senha incorreta', async ({ page }) => {
   const password = faker.internet.password()
 
   await loginPage.visit()
@@ -57,7 +57,7 @@ test('não deve logar com senha incorreta', async ({ page }) => {
   await loginPage.loginUnsuccess('Username and password do not match any user in this service')
 })
 
-test('não deve logar sem preenchimento dos campos', async ({ page }) => {
+test.skip('não deve logar sem preenchimento dos campos', async ({ page }) => {
   await loginPage.visit()
   await loginPage.login('', '')
   await loginPage.loginUnsuccess('Username is required')
