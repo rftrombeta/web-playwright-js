@@ -5,7 +5,7 @@ const { defineConfig, devices } = require('@playwright/test');
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-require('dotenv').config();
+// require('dotenv').config();
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -24,11 +24,11 @@ module.exports = defineConfig({
   reporter: [
     ['dot'],
     ['html'],
-    ['playwright-tesults-reporter', {'tesults-target': process.env.TOKEN}]
+    ['playwright-tesults-reporter', {'tesults-target': 'token'}]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: process.env.BASE_URL,
+    baseURL: 'https://www.saucedemo.com',
     trace: 'on-first-retry',
     screenshot: 'on',
     video: 'retain-on-failure',

@@ -1,9 +1,6 @@
 import { MongoClient } from 'mongodb'
-import dotenv from 'dotenv'
 
-dotenv.config()
-
-const uri = process.env.DB_HOST
+const uri = 'mongodb://localhost:27017/'
 const client = new MongoClient(uri)
 
 /**
@@ -15,7 +12,7 @@ const client = new MongoClient(uri)
 export async function connectToDatabase() {
     try {
         await client.connect();
-        return client.db(process.env.DB_NAME);
+        return client.db('mongodb');
     } catch (error) {
         console.error('Erro ao conectar ao banco de dados:', error);
         throw new Error('Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.');
@@ -34,7 +31,7 @@ export async function connectToDatabase() {
  */
 export async function insertProductDetailsInMongDb(firstName, lastName, zipCode, overviewProducts) {
     const db = await connectToDatabase();
-    const collection = db.collection(process.env.DB_COLLECTION); // Substitua pelo nome da sua coleção
+    const collection = db.collection('orders'); // Substitua pelo nome da sua coleção
     return await collection.insertOne({
         firstName,
         lastName,
