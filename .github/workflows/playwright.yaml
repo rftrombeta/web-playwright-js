@@ -41,6 +41,8 @@ jobs:
           echo "Waiting for MongoDB..."
           sleep 2
         done
+    - name: Set up environment variables
+      run: echo "MONGODB_URI=mongodb://localhost:27017/mongodb" >> $GITHUB_ENV
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
