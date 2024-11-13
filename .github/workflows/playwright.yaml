@@ -39,6 +39,7 @@ jobs:
             break
           fi
           echo "Waiting for MongoDB..."
+          docker logs mongodb
           sleep 2
         done
     - name: Set up environment variables
