@@ -2,7 +2,9 @@
   "name": "web-playwright",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "node tests/support/database.js"
+  },
   "keywords": [],
   "author": "Rodrigo Trombeta",
   "license": "ISC",
@@ -12,5 +14,9 @@
     "@playwright/test": "^1.48.2",
     "@types/node": "^22.9.0",
     "mongodb": "^6.10.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "playwright-tesults-reporter": "^1.1.0"
   }
 }

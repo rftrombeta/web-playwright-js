@@ -39,7 +39,7 @@ test('deve adicionar um produto no carrinho e realizar o checkout', async ({ pag
     const overviewProducts = await page.checkout.listOverviewProducts()
 
     // Enviar para o banco de dados as iformações do usuário e os produtos
-    insertProductDetailsInMongDb(firstName, lastName, zipCode, overviewProducts)
+    await insertProductDetailsInMongDb(firstName, lastName, zipCode, overviewProducts)
     
     await page.checkout.finishCheckout()
 

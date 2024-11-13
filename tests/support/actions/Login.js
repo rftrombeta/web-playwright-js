@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { expect } = require('@playwright/test')
 
 export class Login {
@@ -35,7 +37,7 @@ export class Login {
      * Navega para a página de login e verifica se o formulário de login está visível.
      */
     async visit() {
-        await this.page.goto('https://www.saucedemo.com')
+        await this.page.goto(process.env.BASE_URL)
         await this.isLoginIn()
     }
 

@@ -1,0 +1,1068 @@
+{
+  "config": {
+    "configFile": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\playwright.config.js",
+    "rootDir": "C:/RFTROMBETA/MyGit/web-playwright-js/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 6
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/RFTROMBETA/MyGit/web-playwright-js/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/RFTROMBETA/MyGit/web-playwright-js/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/RFTROMBETA/MyGit/web-playwright-js/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/RFTROMBETA/MyGit/web-playwright-js/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/RFTROMBETA/MyGit/web-playwright-js/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/RFTROMBETA/MyGit/web-playwright-js/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e\\login.spec.js",
+      "file": "e2e/login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "realiza login",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 5901,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:12.793Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-login-realiza-login-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-3e74ceb9031443071ea3",
+          "file": "e2e/login.spec.js",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "não deve logar sem usuário",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 3020,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:13.093Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-login-não-deve-logar-sem-usuário-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-e500492b3660d85567ad",
+          "file": "e2e/login.spec.js",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "não deve logar sem senha",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:10.239Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-2c149ef9b416ade5d3f8",
+          "file": "e2e/login.spec.js",
+          "line": 12,
+          "column": 6
+        },
+        {
+          "title": "não deve logar com usuário inexistente",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:10.240Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-f7646b932c7d444888c1",
+          "file": "e2e/login.spec.js",
+          "line": 16,
+          "column": 6
+        },
+        {
+          "title": "não deve logar com senha incorreta",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:10.241Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-ba29f394c5d14db364b1",
+          "file": "e2e/login.spec.js",
+          "line": 22,
+          "column": 6
+        },
+        {
+          "title": "não deve logar sem preenchimento dos campos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:10.242Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-9b7b9e183930c314ce66",
+          "file": "e2e/login.spec.js",
+          "line": 28,
+          "column": 6
+        },
+        {
+          "title": "realiza login",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 6998,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:13.029Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-login-realiza-login-firefox\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-f034213cbfd866401417",
+          "file": "e2e/login.spec.js",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "não deve logar sem usuário",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 5764,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:13.296Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-login-não-deve-logar-sem-usuário-firefox\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-f3162ef98234da13eca7",
+          "file": "e2e/login.spec.js",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "não deve logar sem senha",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:10.245Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-a0181726710033a5be5a",
+          "file": "e2e/login.spec.js",
+          "line": 12,
+          "column": 6
+        },
+        {
+          "title": "não deve logar com usuário inexistente",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:10.246Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-278c40944ba573331bbe",
+          "file": "e2e/login.spec.js",
+          "line": 16,
+          "column": 6
+        },
+        {
+          "title": "não deve logar com senha incorreta",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:10.246Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-1f0ef198129c9a7fd4a4",
+          "file": "e2e/login.spec.js",
+          "line": 22,
+          "column": 6
+        },
+        {
+          "title": "não deve logar sem preenchimento dos campos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:10.247Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-89ee9578fb2ef8b8f952",
+          "file": "e2e/login.spec.js",
+          "line": 28,
+          "column": 6
+        },
+        {
+          "title": "realiza login",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "status": "passed",
+                  "duration": 4915,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:23.261Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-login-realiza-login-webkit\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-0b96f4b436a77fa41016",
+          "file": "e2e/login.spec.js",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "não deve logar sem usuário",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "status": "passed",
+                  "duration": 3294,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:25.151Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-login-não-deve-logar-sem-usuário-webkit\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ce46b734337c02890a88-1c0fa91ef2a7b5043b83",
+          "file": "e2e/login.spec.js",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "não deve logar sem senha",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:21.943Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-2cea586e6bdba0c9c3a0",
+          "file": "e2e/login.spec.js",
+          "line": 12,
+          "column": 6
+        },
+        {
+          "title": "não deve logar com usuário inexistente",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:21.944Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-47c02eb07a0002d80445",
+          "file": "e2e/login.spec.js",
+          "line": 16,
+          "column": 6
+        },
+        {
+          "title": "não deve logar com senha incorreta",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:21.945Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-40008e9066795190a5b0",
+          "file": "e2e/login.spec.js",
+          "line": 22,
+          "column": 6
+        },
+        {
+          "title": "não deve logar sem preenchimento dos campos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:21.946Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ce46b734337c02890a88-54aa4ea4d7706c9e6ec7",
+          "file": "e2e/login.spec.js",
+          "line": 28,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "e2e\\products.spec.js",
+      "file": "e2e/products.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "deve adicionar um produto no carrinho e realizar o checkout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "failed",
+                  "duration": 29925,
+                  "error": {
+                    "message": "Error: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.",
+                    "stack": "Error: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.\n    at connectToDatabase (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:23:15)\n    at insertProductDetailsInMongDb (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:38:16)\n    at C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\e2e\\products.spec.js:42:5",
+                    "location": {
+                      "file": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js",
+                      "column": 15,
+                      "line": 23
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39msupport\\database.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 22 |\u001b[39m         console\u001b[33m.\u001b[39merror(\u001b[32m'Erro ao conectar ao banco de dados:'\u001b[39m\u001b[33m,\u001b[39m error)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     }\n \u001b[90m 25 |\u001b[39m }\n \u001b[90m 26 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js",
+                        "column": 15,
+                        "line": 23
+                      },
+                      "message": "Error: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.\n\n\u001b[90m   at \u001b[39msupport\\database.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 22 |\u001b[39m         console\u001b[33m.\u001b[39merror(\u001b[32m'Erro ao conectar ao banco de dados:'\u001b[39m\u001b[33m,\u001b[39m error)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     }\n \u001b[90m 25 |\u001b[39m }\n \u001b[90m 26 |\u001b[39m\u001b[0m\n\n\u001b[2m    at connectToDatabase (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:23:15)\u001b[22m\n\u001b[2m    at insertProductDetailsInMongDb (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:38:16)\u001b[22m\n\u001b[2m    at C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\e2e\\products.spec.js:42:5\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Produto: Sauce Labs Bike Light\n"
+                    },
+                    {
+                      "text": "Descrição: A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.\n"
+                    },
+                    {
+                      "text": "Preço: $9.99\n"
+                    },
+                    {
+                      "text": "Subtotal: Item total: $9.99\n"
+                    },
+                    {
+                      "text": "Taxa: Tax: $0.80\n"
+                    },
+                    {
+                      "text": "Total: Total: $10.79\n"
+                    },
+                    {
+                      "text": "VAMOS TENTAR CONECTAR\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "Erro ao conectar ao banco de dados: MongoServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at Topology.selectServer \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:610:30\u001b[90m)\u001b[39m\n    at Topology._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:463:22\u001b[90m)\u001b[39m\n    at Topology.connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:410:7\u001b[90m)\u001b[39m\n    at topologyConnect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:596:9\u001b[90m)\u001b[39m\n    at MongoClient._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:608:7\u001b[90m)\u001b[39m {\n  reason: TopologyDescription {\n    type: \u001b[32m'Unknown'\u001b[39m,\n    servers: Map(1) { \u001b[32m'localhost:27017'\u001b[39m => \u001b[36m[ServerDescription]\u001b[39m },\n    stale: \u001b[33mfalse\u001b[39m,\n    compatible: \u001b[33mtrue\u001b[39m,\n    heartbeatFrequencyMS: \u001b[33m10000\u001b[39m,\n    localThresholdMS: \u001b[33m15\u001b[39m,\n    setName: \u001b[1mnull\u001b[22m,\n    maxElectionId: \u001b[1mnull\u001b[22m,\n    maxSetVersion: \u001b[1mnull\u001b[22m,\n    commonWireVersion: \u001b[33m0\u001b[39m,\n    logicalSessionTimeoutMinutes: \u001b[1mnull\u001b[22m\n  },\n  code: \u001b[90mundefined\u001b[39m,\n  [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(0) {},\n  [cause]: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n      at connectionFailureError \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:473:14\u001b[90m)\u001b[39m\n      at Socket.<anonymous> \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:375:38\u001b[90m)\u001b[39m\n  \u001b[90m    at Object.onceWrapper (node:events:633:26)\u001b[39m\n  \u001b[90m    at Socket.emit (node:events:518:28)\u001b[39m\n  \u001b[90m    at emitErrorNT (node:internal/streams/destroy:170:8)\u001b[39m\n  \u001b[90m    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\u001b[39m\n  \u001b[90m    at processTicksAndRejections (node:internal/process/task_queues:90:21)\u001b[39m {\n    [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(1) { \u001b[32m'ResetPool'\u001b[39m },\n    [cause]: AggregateError: \n    \u001b[90m    at internalConnectMultiple (node:net:1121:18)\u001b[39m\n    \u001b[90m    at afterConnectMultiple (node:net:1688:7)\u001b[39m\n    \u001b[90m    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)\u001b[39m {\n      code: \u001b[32m'ECONNREFUSED'\u001b[39m,\n      [errors]: \u001b[36m[Array]\u001b[39m\n    }\n  }\n}\n"
+                    },
+                    {
+                      "text": "Erro ao conectar ao banco de dados: MongoServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at Topology.selectServer \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:610:30\u001b[90m)\u001b[39m\n    at Topology._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:463:22\u001b[90m)\u001b[39m\n    at Topology.connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:410:7\u001b[90m)\u001b[39m\n    at topologyConnect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:596:9\u001b[90m)\u001b[39m\n    at MongoClient._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:608:7\u001b[90m)\u001b[39m {\n  reason: TopologyDescription {\n    type: \u001b[32m'Unknown'\u001b[39m,\n    servers: Map(1) { \u001b[32m'localhost:27017'\u001b[39m => \u001b[36m[ServerDescription]\u001b[39m },\n    stale: \u001b[33mfalse\u001b[39m,\n    compatible: \u001b[33mtrue\u001b[39m,\n    heartbeatFrequencyMS: \u001b[33m10000\u001b[39m,\n    localThresholdMS: \u001b[33m15\u001b[39m,\n    setName: \u001b[1mnull\u001b[22m,\n    maxElectionId: \u001b[1mnull\u001b[22m,\n    maxSetVersion: \u001b[1mnull\u001b[22m,\n    commonWireVersion: \u001b[33m0\u001b[39m,\n    logicalSessionTimeoutMinutes: \u001b[1mnull\u001b[22m\n  },\n  code: \u001b[90mundefined\u001b[39m,\n  [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(0) {},\n  [cause]: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n      at connectionFailureError \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:473:14\u001b[90m)\u001b[39m\n      at Socket.<anonymous> \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:375:38\u001b[90m)\u001b[39m\n  \u001b[90m    at Object.onceWrapper (node:events:633:26)\u001b[39m\n  \u001b[90m    at Socket.emit (node:events:518:28)\u001b[39m\n  \u001b[90m    at emitErrorNT (node:internal/streams/destroy:170:8)\u001b[39m\n  \u001b[90m    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\u001b[39m\n  \u001b[90m    at processTicksAndRejections (node:internal/process/task_queues:90:21)\u001b[39m {\n    [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(1) { \u001b[32m'ResetPool'\u001b[39m },\n    [cause]: AggregateError: \n    \u001b[90m    at internalConnectMultiple (node:net:1121:18)\u001b[39m\n    \u001b[90m    at afterConnectMultiple (node:net:1688:7)\u001b[39m\n    \u001b[90m    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)\u001b[39m {\n      code: \u001b[32m'ECONNREFUSED'\u001b[39m,\n      [errors]: \u001b[36m[Array]\u001b[39m\n    }\n  }\n}\n"
+                    },
+                    {
+                      "text": "Erro ao conectar ao banco de dados: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:13.875Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-products-deve-adiciona-6ff49-rinho-e-realizar-o-checkout-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-products-deve-adiciona-6ff49-rinho-e-realizar-o-checkout-chromium\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js",
+                    "column": 15,
+                    "line": 23
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7a257b7718297edf0293-14053d6b8828ca0b21da",
+          "file": "e2e/products.spec.js",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "deve adicionar um produto no carrinho e realizar o checkout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "failed",
+                  "duration": 25420,
+                  "error": {
+                    "message": "Error: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.",
+                    "stack": "Error: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.\n    at connectToDatabase (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:23:15)\n    at insertProductDetailsInMongDb (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:38:16)\n    at C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\e2e\\products.spec.js:42:5",
+                    "location": {
+                      "file": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js",
+                      "column": 15,
+                      "line": 23
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39msupport\\database.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 22 |\u001b[39m         console\u001b[33m.\u001b[39merror(\u001b[32m'Erro ao conectar ao banco de dados:'\u001b[39m\u001b[33m,\u001b[39m error)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     }\n \u001b[90m 25 |\u001b[39m }\n \u001b[90m 26 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js",
+                        "column": 15,
+                        "line": 23
+                      },
+                      "message": "Error: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.\n\n\u001b[90m   at \u001b[39msupport\\database.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 22 |\u001b[39m         console\u001b[33m.\u001b[39merror(\u001b[32m'Erro ao conectar ao banco de dados:'\u001b[39m\u001b[33m,\u001b[39m error)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m     }\n \u001b[90m 25 |\u001b[39m }\n \u001b[90m 26 |\u001b[39m\u001b[0m\n\n\u001b[2m    at connectToDatabase (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:23:15)\u001b[22m\n\u001b[2m    at insertProductDetailsInMongDb (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:38:16)\u001b[22m\n\u001b[2m    at C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\e2e\\products.spec.js:42:5\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Produto: Sauce Labs Onesie\n"
+                    },
+                    {
+                      "text": "Descrição: Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.\n"
+                    },
+                    {
+                      "text": "Preço: $7.99\n"
+                    },
+                    {
+                      "text": "Subtotal: Item total: $7.99\n"
+                    },
+                    {
+                      "text": "Taxa: Tax: $0.64\n"
+                    },
+                    {
+                      "text": "Total: Total: $8.63\n"
+                    },
+                    {
+                      "text": "VAMOS TENTAR CONECTAR\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "Erro ao conectar ao banco de dados: MongoServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at Topology.selectServer \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:610:30\u001b[90m)\u001b[39m\n    at Topology._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:463:22\u001b[90m)\u001b[39m\n    at Topology.connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:410:7\u001b[90m)\u001b[39m\n    at topologyConnect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:596:9\u001b[90m)\u001b[39m\n    at MongoClient._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:608:7\u001b[90m)\u001b[39m {\n  reason: TopologyDescription {\n    type: \u001b[32m'Unknown'\u001b[39m,\n    servers: Map(1) { \u001b[32m'localhost:27017'\u001b[39m => \u001b[36m[ServerDescription]\u001b[39m },\n    stale: \u001b[33mfalse\u001b[39m,\n    compatible: \u001b[33mtrue\u001b[39m,\n    heartbeatFrequencyMS: \u001b[33m10000\u001b[39m,\n    localThresholdMS: \u001b[33m15\u001b[39m,\n    setName: \u001b[1mnull\u001b[22m,\n    maxElectionId: \u001b[1mnull\u001b[22m,\n    maxSetVersion: \u001b[1mnull\u001b[22m,\n    commonWireVersion: \u001b[33m0\u001b[39m,\n    logicalSessionTimeoutMinutes: \u001b[1mnull\u001b[22m\n  },\n  code: \u001b[90mundefined\u001b[39m,\n  [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(0) {},\n  [cause]: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n      at connectionFailureError \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:473:14\u001b[90m)\u001b[39m\n      at Socket.<anonymous> \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:375:38\u001b[90m)\u001b[39m\n  \u001b[90m    at Object.onceWrapper (node:events:633:26)\u001b[39m\n  \u001b[90m    at Socket.emit (node:events:518:28)\u001b[39m\n  \u001b[90m    at emitErrorNT (node:internal/streams/destroy:170:8)\u001b[39m\n  \u001b[90m    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\u001b[39m\n  \u001b[90m    at processTicksAndRejections (node:internal/process/task_queues:90:21)\u001b[39m {\n    [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(1) { \u001b[32m'ResetPool'\u001b[39m },\n    [cause]: AggregateError: \n    \u001b[90m    at internalConnectMultiple (node:net:1121:18)\u001b[39m\n    \u001b[90m    at afterConnectMultiple (node:net:1688:7)\u001b[39m\n    \u001b[90m    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)\u001b[39m {\n      code: \u001b[32m'ECONNREFUSED'\u001b[39m,\n      [errors]: \u001b[36m[Array]\u001b[39m\n    }\n  }\n}\n"
+                    },
+                    {
+                      "text": "Erro ao conectar ao banco de dados: MongoServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at Topology.selectServer \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:610:30\u001b[90m)\u001b[39m\n    at Topology._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:463:22\u001b[90m)\u001b[39m\n    at Topology.connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:410:7\u001b[90m)\u001b[39m\n    at topologyConnect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:596:9\u001b[90m)\u001b[39m\n    at MongoClient._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:608:7\u001b[90m)\u001b[39m {\n  reason: TopologyDescription {\n    type: \u001b[32m'Unknown'\u001b[39m,\n    servers: Map(1) { \u001b[32m'localhost:27017'\u001b[39m => \u001b[36m[ServerDescription]\u001b[39m },\n    stale: \u001b[33mfalse\u001b[39m,\n    compatible: \u001b[33mtrue\u001b[39m,\n    heartbeatFrequencyMS: \u001b[33m10000\u001b[39m,\n    localThresholdMS: \u001b[33m15\u001b[39m,\n    setName: \u001b[1mnull\u001b[22m,\n    maxElectionId: \u001b[1mnull\u001b[22m,\n    maxSetVersion: \u001b[1mnull\u001b[22m,\n    commonWireVersion: \u001b[33m0\u001b[39m,\n    logicalSessionTimeoutMinutes: \u001b[1mnull\u001b[22m\n  },\n  code: \u001b[90mundefined\u001b[39m,\n  [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(0) {},\n  [cause]: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n      at connectionFailureError \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:473:14\u001b[90m)\u001b[39m\n      at Socket.<anonymous> \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:375:38\u001b[90m)\u001b[39m\n  \u001b[90m    at Object.onceWrapper (node:events:633:26)\u001b[39m\n  \u001b[90m    at Socket.emit (node:events:518:28)\u001b[39m\n  \u001b[90m    at emitErrorNT (node:internal/streams/destroy:170:8)\u001b[39m\n  \u001b[90m    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\u001b[39m\n  \u001b[90m    at processTicksAndRejections (node:internal/process/task_queues:90:21)\u001b[39m {\n    [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(1) { \u001b[32m'ResetPool'\u001b[39m },\n    [cause]: AggregateError: \n    \u001b[90m    at internalConnectMultiple (node:net:1121:18)\u001b[39m\n    \u001b[90m    at afterConnectMultiple (node:net:1688:7)\u001b[39m\n    \u001b[90m    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)\u001b[39m {\n      code: \u001b[32m'ECONNREFUSED'\u001b[39m,\n      [errors]: \u001b[36m[Array]\u001b[39m\n    }\n  }\n}\n"
+                    },
+                    {
+                      "text": "Erro ao conectar ao banco de dados: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:14.100Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-products-deve-adiciona-6ff49-rinho-e-realizar-o-checkout-firefox\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-products-deve-adiciona-6ff49-rinho-e-realizar-o-checkout-firefox\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js",
+                    "column": 15,
+                    "line": 23
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7a257b7718297edf0293-e06982f8cc923920a760",
+          "file": "e2e/products.spec.js",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "deve adicionar um produto no carrinho e realizar o checkout",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "status": "failed",
+                  "duration": 29611,
+                  "error": {
+                    "message": "Error: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.",
+                    "stack": "Error: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.\n    at connectToDatabase (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:23:15)\n    at insertProductDetailsInMongDb (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:38:16)\n    at C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\e2e\\products.spec.js:42:5",
+                    "location": {
+                      "file": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js",
+                      "column": 15,
+                      "line": 23
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39msupport\\database.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m         console\u001b[33m.\u001b[39merror(\u001b[32m'Erro ao conectar ao banco de dados:'\u001b[39m\u001b[33m,\u001b[39m error)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     }\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m }\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js",
+                        "column": 15,
+                        "line": 23
+                      },
+                      "message": "Error: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.\n\n\u001b[90m   at \u001b[39msupport\\database.js:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m         console\u001b[33m.\u001b[39merror(\u001b[32m'Erro ao conectar ao banco de dados:'\u001b[39m\u001b[33m,\u001b[39m error)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     }\n \u001b[90m    |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m }\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m \u001b[90m/**\u001b[39m\u001b[0m\n\n\u001b[2m    at connectToDatabase (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:23:15)\u001b[22m\n\u001b[2m    at insertProductDetailsInMongDb (C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js:38:16)\u001b[22m\n\u001b[2m    at C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\e2e\\products.spec.js:42:5\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Produto: Sauce Labs Backpack\n"
+                    },
+                    {
+                      "text": "Descrição: carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.\n"
+                    },
+                    {
+                      "text": "Preço: $29.99\n"
+                    },
+                    {
+                      "text": "Subtotal: Item total: $29.99\n"
+                    },
+                    {
+                      "text": "Taxa: Tax: $2.40\n"
+                    },
+                    {
+                      "text": "Total: Total: $32.39\n"
+                    },
+                    {
+                      "text": "VAMOS TENTAR CONECTAR\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "Erro ao conectar ao banco de dados: MongoServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at Topology.selectServer \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:610:30\u001b[90m)\u001b[39m\n\u001b[90m    at runNextTicks (node:internal/process/task_queues:65:5)\u001b[39m\n\u001b[90m    at processTimers (node:internal/timers:526:9)\u001b[39m\n    at Topology._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:463:22\u001b[90m)\u001b[39m\n    at Topology.connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:410:7\u001b[90m)\u001b[39m\n    at topologyConnect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:596:9\u001b[90m)\u001b[39m\n    at MongoClient._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:608:7\u001b[90m)\u001b[39m {\n  reason: TopologyDescription {\n    type: \u001b[32m'Unknown'\u001b[39m,\n    servers: Map(1) { \u001b[32m'localhost:27017'\u001b[39m => \u001b[36m[ServerDescription]\u001b[39m },\n    stale: \u001b[33mfalse\u001b[39m,\n    compatible: \u001b[33mtrue\u001b[39m,\n    heartbeatFrequencyMS: \u001b[33m10000\u001b[39m,\n    localThresholdMS: \u001b[33m15\u001b[39m,\n    setName: \u001b[1mnull\u001b[22m,\n    maxElectionId: \u001b[1mnull\u001b[22m,\n    maxSetVersion: \u001b[1mnull\u001b[22m,\n    commonWireVersion: \u001b[33m0\u001b[39m,\n    logicalSessionTimeoutMinutes: \u001b[1mnull\u001b[22m\n  },\n  code: \u001b[90mundefined\u001b[39m,\n  [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(0) {},\n  [cause]: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n      at connectionFailureError \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:473:14\u001b[90m)\u001b[39m\n      at Socket.<anonymous> \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:375:38\u001b[90m)\u001b[39m\n  \u001b[90m    at Object.onceWrapper (node:events:633:26)\u001b[39m\n  \u001b[90m    at Socket.emit (node:events:518:28)\u001b[39m\n  \u001b[90m    at emitErrorNT (node:internal/streams/destroy:170:8)\u001b[39m\n  \u001b[90m    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\u001b[39m\n  \u001b[90m    at processTicksAndRejections (node:internal/process/task_queues:90:21)\u001b[39m {\n    [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(1) { \u001b[32m'ResetPool'\u001b[39m },\n    [cause]: AggregateError: \n    \u001b[90m    at internalConnectMultiple (node:net:1121:18)\u001b[39m\n    \u001b[90m    at afterConnectMultiple (node:net:1688:7)\u001b[39m\n    \u001b[90m    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)\u001b[39m {\n      code: \u001b[32m'ECONNREFUSED'\u001b[39m,\n      [errors]: \u001b[36m[Array]\u001b[39m\n    }\n  }\n}\n"
+                    },
+                    {
+                      "text": "Erro ao conectar ao banco de dados: MongoServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n    at Topology.selectServer \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:610:30\u001b[90m)\u001b[39m\n\u001b[90m    at runNextTicks (node:internal/process/task_queues:65:5)\u001b[39m\n\u001b[90m    at processTimers (node:internal/timers:526:9)\u001b[39m\n    at Topology._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:463:22\u001b[90m)\u001b[39m\n    at Topology.connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\sdam\\topology.ts:410:7\u001b[90m)\u001b[39m\n    at topologyConnect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:596:9\u001b[90m)\u001b[39m\n    at MongoClient._connect \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\mongo_client.ts:608:7\u001b[90m)\u001b[39m {\n  reason: TopologyDescription {\n    type: \u001b[32m'Unknown'\u001b[39m,\n    servers: Map(1) { \u001b[32m'localhost:27017'\u001b[39m => \u001b[36m[ServerDescription]\u001b[39m },\n    stale: \u001b[33mfalse\u001b[39m,\n    compatible: \u001b[33mtrue\u001b[39m,\n    heartbeatFrequencyMS: \u001b[33m10000\u001b[39m,\n    localThresholdMS: \u001b[33m15\u001b[39m,\n    setName: \u001b[1mnull\u001b[22m,\n    maxElectionId: \u001b[1mnull\u001b[22m,\n    maxSetVersion: \u001b[1mnull\u001b[22m,\n    commonWireVersion: \u001b[33m0\u001b[39m,\n    logicalSessionTimeoutMinutes: \u001b[1mnull\u001b[22m\n  },\n  code: \u001b[90mundefined\u001b[39m,\n  [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(0) {},\n  [cause]: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017\n      at connectionFailureError \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:473:14\u001b[90m)\u001b[39m\n      at Socket.<anonymous> \u001b[90m(C:\\RFTROMBETA\\MyGit\\web-playwright-js\\\u001b[39mnode_modules\\\u001b[4mmongodb\u001b[24m\\src\\cmap\\connect.ts:375:38\u001b[90m)\u001b[39m\n  \u001b[90m    at Object.onceWrapper (node:events:633:26)\u001b[39m\n  \u001b[90m    at Socket.emit (node:events:518:28)\u001b[39m\n  \u001b[90m    at emitErrorNT (node:internal/streams/destroy:170:8)\u001b[39m\n  \u001b[90m    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\u001b[39m\n  \u001b[90m    at processTicksAndRejections (node:internal/process/task_queues:90:21)\u001b[39m {\n    [\u001b[32mSymbol(errorLabels)\u001b[39m]: Set(1) { \u001b[32m'ResetPool'\u001b[39m },\n    [cause]: AggregateError: \n    \u001b[90m    at internalConnectMultiple (node:net:1121:18)\u001b[39m\n    \u001b[90m    at afterConnectMultiple (node:net:1688:7)\u001b[39m\n    \u001b[90m    at TCPConnectWrap.callbackTrampoline (node:internal/async_hooks:130:17)\u001b[39m {\n      code: \u001b[32m'ECONNREFUSED'\u001b[39m,\n      [errors]: \u001b[36m[Array]\u001b[39m\n    }\n  }\n}\n"
+                    },
+                    {
+                      "text": "Erro ao conectar ao banco de dados: Não foi possível conectar ao banco de dados. Verifique se o MongoDB está em execução.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2024-11-13T02:01:26.344Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-products-deve-adiciona-6ff49-rinho-e-realizar-o-checkout-webkit\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\test-results\\e2e-products-deve-adiciona-6ff49-rinho-e-realizar-o-checkout-webkit\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\RFTROMBETA\\MyGit\\web-playwright-js\\tests\\support\\database.js",
+                    "column": 15,
+                    "line": 23
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7a257b7718297edf0293-a627e8ea06f728e56570",
+          "file": "e2e/products.spec.js",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-11-13T02:01:09.736Z",
+    "duration": 47170.443,
+    "expected": 6,
+    "skipped": 12,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

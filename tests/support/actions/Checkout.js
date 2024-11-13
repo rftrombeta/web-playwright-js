@@ -49,19 +49,12 @@ export class Checkout {
             const name = await product.locator('.inventory_item_name').textContent()
             const description = await product.locator('.inventory_item_desc').textContent()
             const price = await product.locator('.inventory_item_price').textContent()
-            console.log(`Produto: ${name}`)
-            console.log(`Descrição: ${description}`)
-            console.log(`Preço: ${price}`)
             productDetails.push({ name, description, price })
         }
 
         const subtotal = await this.page.locator('.summary_subtotal_label').textContent()
         const tax = await this.page.locator('.summary_tax_label').textContent()
         const total = await this.page.locator('.summary_total_label').textContent()
-
-        console.log(`Subtotal: ${subtotal}`)
-        console.log(`Taxa: ${tax}`)
-        console.log(`Total: ${total}`)
 
         return { productDetails, subtotal, tax, total }
     }
