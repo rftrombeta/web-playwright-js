@@ -11,17 +11,6 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
-    services:
-      mongodb:
-        image: mongo:latest
-        ports:
-          - 27017:27017
-        options: >-
-          --health-cmd "mongo --eval 'db.runCommand({ ping: 1 })'"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
@@ -31,15 +20,16 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: Start MongoDB
+      run: docker run --name mongodb -d -p 27017:27017 mongo
     - name: Wait for MongoDB to be ready
       run: |
         for i in {1..30}; do
-          if mongo --host localhost --eval 'db.runCommand({ ping: 1 })'; then
+          if docker exec mongodb mongo --eval 'db.runCommand({ ping: 1 })'; then
             echo "MongoDB is ready"
             break
           fi
           echo "Waiting for MongoDB..."
-          docker logs mongodb
           sleep 2
         done
     - name: Set up environment variables
